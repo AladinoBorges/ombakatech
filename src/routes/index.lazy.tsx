@@ -1,4 +1,4 @@
-import { createLazyFileRoute } from '@tanstack/react-router';
+import { createLazyRoute } from '@tanstack/react-router';
 import React from 'react';
 import { HeroSection } from '../components/organisms/HeroSection';
 import { AboutSection } from '../components/organisms/AboutSection';
@@ -24,6 +24,6 @@ const HomeRouteComponent: React.FC = () => {
   );
 };
 
-export const Route = createLazyFileRoute('/')({
+export const Route = createLazyRoute('/')({
   component: HomeRouteComponent,
 });
