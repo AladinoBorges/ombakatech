@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
               EN &middot; PT &middot; FR &middot; ES
             </span>
             <span className="text-[11px] text-t2">
-              developed with 🤎 and ☕ by{' '}
+              developed by{' '}
               <a
                 href="https://www.linkedin.com/in/aladinoborges"
                 target="_blank"
