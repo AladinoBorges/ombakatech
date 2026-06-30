@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #060e1a;
+    --surf: #0b1628;
+    --card: #0d1e3a;
+    --blue: #1a6cde;
+    --blue-l: #3d8ef5;
+    --red: #c0182a;
+    --red-l: #e8192f;
+    --ora: #f26522;
+    --wh: #ffffff;
+    --t1: rgba(255, 255, 255, 0.62);
+    --t2: rgba(255, 255, 255, 0.30);
+    --div: rgba(255, 255, 255, 0.07);
+    --div-b: rgba(29, 108, 222, 0.2);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--wh);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+  }
+}
+
+/* ── ANIMATIONS ── */
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  animation: up 0.6s ease forwards;
+}
+
+/* ── SCROLL REVEAL ── */
+.rv {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.rv.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.d1 { transition-delay: 0.07s; }
+.d2 { transition-delay: 0.14s; }
+.d3 { transition-delay: 0.21s; }
+.d4 { transition-delay: 0.28s; }
+
+/* Custom utilities */
+.hbg-dots::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(29, 108, 222, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 108, 222, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
